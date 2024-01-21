@@ -1,19 +1,25 @@
 class FRQ1_2011_Sound {
     public static void main(String[] args) {
         Sound sound = new Sound();
-        int[] samples = {40, 2532, 17, -2300, -17, -4000, 2000, 1048, -420, 33, 15, -32, 2030, 3223};
+        int[] samples = { 40, 2532, 17, -2300, -17, -4000, 2000, 1048, -420, 33, 15, -32, 2030, 3223 };
         sound.samples = samples;
-        System.out.println(sound.limitAmplitude(2000));
+        System.out.println("Changes: " + sound.limitAmplitude(2000));
         for (int sample : sound.samples) {
-            System.out.println(sample);
+            System.out.print(sample + " ");
+        }
+        System.out.println();
+        System.out.println();
+
+        int[] samples1 = { 0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0 };
+        sound.samples = samples1;
+        for (int sample : samples1) {
+            System.out.print(sample + " ");
         }
         System.out.println();
 
-        int[] samples1 = {0, 0, 0, 0, -14, 0, -35, -39, 0, -7, 16, 32, 37, 29, 0, 0};
-        sound.samples = samples1;
         sound.trimSilenceFromBeginning();
         for (int sample : sound.samples) {
-            System.out.println(sample);
+            System.out.print(sample + " ");
         }
         System.out.println();
     }
