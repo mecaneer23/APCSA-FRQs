@@ -16,7 +16,6 @@ public class FRQ4_2011_Cipher {
     }
 
     private static void fillBlock(String str) {
-        System.out.println(str);
         int k = 1;
         for (int i = 0; i < numRows; i++) {
             for (int j = 0; j < numCols; j++) {
